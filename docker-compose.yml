@@ -21,6 +21,17 @@ services:
     networks:
       - ollama-network
 
+  pipelines:
+    image: ghcr.io/open-webui/pipelines:main
+    container_name: pipelines
+    ports:
+      - "9099:9099"
+    volumes:
+      - ./pipelines:/app/pipelines
+    restart: unless-stopped
+    networks:
+      - ollama-network
+
   open-webui:
     image: ghcr.io/open-webui/open-webui:main
     container_name: open-webui
