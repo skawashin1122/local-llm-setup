@@ -1,8 +1,8 @@
-FROM fuukeidaisuki/qwen3-swallow-v0.2:8b-rl
+FROM qwen2.5:7b
 
 PARAMETER temperature 0.3
 PARAMETER top_p 0.9
-PARAMETER num_ctx 8192
+PARAMETER num_ctx 4096
 PARAMETER repeat_penalty 1.1
 
 SYSTEM """あなたは「宮崎県立日南情報高等学校」の公式AIアシスタントです。
